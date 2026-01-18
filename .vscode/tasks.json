@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "backend: spring-boot:run",
+			"type": "shell",
+			"command": "cd \"java backend\"; mvn spring-boot:run",
+			"isBackground": true,
+			"problemMatcher": [
+				"$java"
+			],
+			"group": "build"
+		},
+		{
+			"label": "frontend: npm install + dev",
+			"type": "shell",
+			"command": "cd frontend; npm install; npm run dev",
+			"isBackground": true,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		}
+	]
+}

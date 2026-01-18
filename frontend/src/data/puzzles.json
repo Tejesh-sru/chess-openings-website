@@ -1,0 +1,23 @@
+[
+  {
+    "id": "p1",
+    "name": "Simple mate in 1",
+    "description": "Find the mate in one.",
+    "fen": "6k1/5ppp/8/8/8/8/5PPP/6K1 w - - 0 1",
+    "solution": ["g3"]
+  },
+  {
+    "id": "p2",
+    "name": "Fork tactic",
+    "description": "Win material with a fork.",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/1bB1P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 2 4",
+    "solution": ["Bxf7+"]
+  },
+  {
+    "id": "p3",
+    "name": "Back-rank idea",
+    "description": "Exploit back rank weaknesses.",
+    "fen": "6k1/5ppp/8/8/8/8/5PPP/6K1 w - - 0 1",
+    "solution": ["Qe8#"]
+  }
+]

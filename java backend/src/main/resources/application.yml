@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/chessdb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&tcpKeepAlive=true&autoReconnect=true
+    username: root
+    password: "Teju@chess123"
+    hikari:
+      keepaliveTime: 300000       # 5 min TCP keepalive pings to avoid idle drops
+      idleTimeout: 600000         # 10 min idle before releasing connections
+      maxLifetime: 1800000        # 30 min recycle to avoid server-side timeouts
+      minimumIdle: 2
+      maximumPoolSize: 10
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  flyway:
+    enabled: false
+
+jwt:
+  secret: change-me-and-make-it-long-enough-for-hs256
+  expiration-ms: 86400000
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework: INFO
