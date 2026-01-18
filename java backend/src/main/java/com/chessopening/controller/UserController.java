@@ -56,7 +56,7 @@ public class UserController {
             u.getAvatarUrl(),
             u.getBio()
         );
-        
+        //adding comment to check commit
         // Parse favorites from JSON string
         try {
             if (u.getFavorites() != null && !u.getFavorites().isEmpty()) {
