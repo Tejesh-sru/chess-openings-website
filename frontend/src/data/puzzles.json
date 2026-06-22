@@ -1,0 +1,26 @@
+[
+  {
+    "id": "p1",
+    "name": "Simple mate in 1",
+    "description": "Deliver a back-rank checkmate with the rook.",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "solution": ["Rd8#"],
+    "difficultyRating": 800
+  },
+  {
+    "id": "p2",
+    "name": "Fork tactic",
+    "description": "Fork the black king and rook with your knight.",
+    "fen": "r3kbnr/pp1p1ppp/3p4/3Np3/4P3/8/PPPP1PPP/R1B1KBNR w KQkq - 0 1",
+    "solution": ["Nc7+"],
+    "difficultyRating": 1300
+  },
+  {
+    "id": "p3",
+    "name": "Back-rank idea",
+    "description": "Deliver a back-rank checkmate with the queen.",
+    "fen": "6k1/5ppp/8/8/8/8/8/4Q1K1 w - - 0 1",
+    "solution": ["Qe8#"],
+    "difficultyRating": 900
+  }
+]

@@ -1,0 +1,23 @@
+# Java build
+**/target/
+
+# Node
+**/node_modules/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# NPM
+package-lock.json
+
+# dotenv
+.env
+python-services/stockfish/stockfish-windows-x86-64-avx2.exe
