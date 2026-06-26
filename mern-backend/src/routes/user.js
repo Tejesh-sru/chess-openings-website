@@ -7,7 +7,7 @@ const auth = require('../middleware/auth')
 router.get('/me', auth, async (req, res) => {
   try {
     return res.json(req.user)
-  } catch (err) {
+  } catch (err) { 
     console.error('Get me error', err)
     return res.status(500).json({ error: 'internal_server_error' })
   }
