@@ -7,7 +7,7 @@ import Profile from './components/Profile'
 import LoginRegister from './components/LoginRegister'
 import ProfileSetup from './components/ProfileSetup'
 import ConnectionStatus from './components/ConnectionStatus'
-import AIPanel from './components/AIPanel'
+import AIPanel from './components/AIPanel' 
 import GameAnalysis from './components/GameAnalysis'
 import { useAuth } from './context/AuthContext'
 
