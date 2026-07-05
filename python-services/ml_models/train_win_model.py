@@ -30,7 +30,7 @@ FEATURE_COLS = [
 ]
 
 
-def naive_baseline_win_prob(material_diff):
+def naive_baseline_win_prob(material_diff): 
     """
     The project's CURRENT approach (from stockfish_service.py), repurposed
     here using material_diff (in pawns) as a stand-in for centipawn eval,
