@@ -2,7 +2,7 @@
 Extracts the SAME feature set used in training (see build_features.py),
 but from a live FEN position instead of a replayed historical game.
 Used at inference time by the trained win-probability model.
-
+ 
 One difference from training: live positions don't have white_rating/
 black_rating from a finished game, so rating_diff defaults to 0 (i.e.
 "assume equal-strength players") unless the caller supplies ratings.
