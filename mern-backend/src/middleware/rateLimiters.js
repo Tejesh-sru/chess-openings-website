@@ -7,7 +7,7 @@ function makeLimiter({ windowMs, max, message }) {
     windowMs,
     max,
     standardHeaders: true, // adds RateLimit-* headers so clients can back off intelligently
-    legacyHeaders: false,
+    legacyHeaders: false, 
     // Key by authenticated user when available (set by the auth middleware upstream),
     // falling back to IP for unauthenticated requests. This avoids over-penalizing
     // multiple users behind the same IP (offices, NAT, mobile carriers) while still
