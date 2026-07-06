@@ -4,7 +4,7 @@ const path = require('path');
 const dotenv = require('dotenv');
 const Opening = require('./models/Opening');
 
-dotenv.config(); 
+dotenv.config();
 
 async function main() {
   const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/chessopening';

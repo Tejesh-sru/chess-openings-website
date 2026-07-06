@@ -5,7 +5,13 @@ const Opening = require('../models/Opening');
 
 router.get('/', async (req, res) => {
   try {
-    const items = await Opening.find().limit(200).lean();
+    // Cursor-friendly pagination via limit/skip. The hard 200 cap alone was
+    // fine while the collection was small, but it doesn't scale as more
+    // openings get added and it always paid the cost of fetching the max
+    // page even for a client that only renders 20 rows.
+    const limit = Math.min(parseInt(req.query.limit, 10) || 50, 200);
+    const skip = Math.max(parseInt(req.query.skip, 10) || 0, 0);
+    const items = await Opening.find().skip(skip).limit(limit).lean();
     const mapped = items.map(item => ({ ...item, id: item.externalId }));
     return res.json(mapped);
   } catch (err) {

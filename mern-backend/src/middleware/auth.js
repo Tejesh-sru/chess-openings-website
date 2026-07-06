@@ -11,7 +11,11 @@ async function authMiddleware(req, res, next) {
   const token = parts[1]
   try {
     const payload = jwt.verify(token, SECRET)
-    const user = await User.findById(payload.sub).lean()
+    // Exclude the password hash: this runs on every authenticated request
+    // (games list, favorites, profile updates...) and req.user gets
+    // returned directly by GET /api/user/me, so without this projection
+    // the bcrypt hash was being sent to the client on every login session.
+    const user = await User.findById(payload.sub).select('-password').lean()
     if (!user) return res.status(401).json({ error: 'Invalid token' })
     req.user = user
     next()
