@@ -2,7 +2,7 @@ const rateLimit = require('express-rate-limit')
 
 // Shared handler so every limiter returns a consistent, informative 429 body
 // instead of the express-rate-limit default plain-text response.
-function makeLimiter({ windowMs, max, message }) {
+function makeLimiter({ windowMs, max, message }) { 
   return rateLimit({
     windowMs,
     max,
