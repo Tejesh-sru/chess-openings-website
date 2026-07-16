@@ -6,7 +6,7 @@ const GameSchema = new mongoose.Schema({
   moves: { type: String },
   movesCount: { type: Number }
 }, { timestamps: true })
-
+ 
 // The games list route queries by userId and sorts by createdAt descending
 // (GET /api/games). Without this compound index, Mongo does a collection
 // scan for the userId filter and an in-memory sort for every request.
