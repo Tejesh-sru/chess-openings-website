@@ -5,7 +5,7 @@ const rateLimit = require('express-rate-limit')
 function makeLimiter({ windowMs, max, message }) { 
   return rateLimit({
     windowMs,
-    max,
+    max, 
     standardHeaders: true, // adds RateLimit-* headers so clients can back off intelligently
     legacyHeaders: false,  
     // Key by authenticated user when available (set by the auth middleware upstream),
