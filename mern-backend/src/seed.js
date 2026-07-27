@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
-const Opening = require('./models/Opening');
+const Opening = require('./models/Opening'); 
 
 dotenv.config();
 
