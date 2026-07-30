@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 from services.stockfish_service import (
-    init_engine,
+    init_engine, 
     get_best_moves,
     evaluate_position, 
     analyze_game,
