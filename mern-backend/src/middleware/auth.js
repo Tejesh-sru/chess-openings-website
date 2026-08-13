@@ -3,7 +3,7 @@ const User = require('../models/User')
 
 const SECRET = process.env.JWT_SECRET || 'dev_secret_change_me'
 
-async function authMiddleware(req, res, next) {
+async function authMiddleware(req, res, next) { 
   const auth = req.headers.authorization
   if (!auth) return res.status(401).json({ error: 'Missing auth' })
   const parts = auth.split(' ')
