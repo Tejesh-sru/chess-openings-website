@@ -6,7 +6,7 @@ const auth = require('../middleware/auth')
 // public - get current user by token
 router.get('/me', auth, async (req, res) => {
   try {
-    return res.json(req.user)
+    return res.json(req.user) 
   } catch (err) {
     console.error('Get me error', err)
     return res.status(500).json({ error: 'internal_server_error' })
